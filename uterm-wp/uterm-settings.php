@@ -78,24 +78,6 @@ add_action('admin_init', function () {
         $key_settings_section
     );
 
-    // Add public key field (for settings API registration)
-    add_settings_field(
-        'public_key_field',
-        'Public Key',
-        'public_key_field_callback',
-        $key_admin_page,
-        $key_settings_section
-    );
-
-    // Add secret key field (for settings API registration)
-    add_settings_field(
-        'secret_key_field',
-        'Secret Key',
-        'secret_key_field_callback',
-        $key_admin_page,
-        $key_settings_section
-    );
-
     // Product settings
     $product_settings_section = 'product_settings_section';
     register_setting($key_settings_group, 'uterm_products', [
